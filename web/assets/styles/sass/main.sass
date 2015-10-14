@@ -1,0 +1,122 @@
+@import variables  
+@import ./bourbon
+@import about  
+@import modal    
+// declare styles for text items    
+h1, h2, h3, h4, h5, h6
+h1, h3
+    padding-bottom: .5em
+    @media (min-width: 768px)
+        padding-bottom: 1em
+h1
+    font-size: 64px
+h5
+    font-size: 16px  
+p
+    //font-family: $oxygen
+// get rid of awful bullet points    
+ul
+    list-style: none
+    padding-left: 0
+    li
+        padding-top: 8px
+body
+    background: $red
+#page-wrap
+    background: white
+#nav-row
+    height: 50px
+    padding: 0
+nav
+    height: 50px
+    @media (min-width: 992px) 
+        height: 70px
+    box-shadow: 0 4px 3px -3px #efefef
+    .container-fluid
+        .navbar-header, .collapse
+        @media (min-width: 786px)    
+            ul
+                float: right
+        
+#header-image
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(./assets/img/white-home-decoration-candles.jpg) center 
+    background-size: cover
+    background-repeat: no-repeat
+    margin-top: 0
+    box-shadow: 0 4px 3px -3px #efefef
+    color: white
+    .container
+        @media (min-width: 1200px)
+            max-width: 1000px 
+        #title
+            color: #c65c54
+            #slogan
+                color: white
+                font-weight: 300
+        p
+            font-size: 16px
+            @media (min-width: 786px)
+                margin-top: -20px
+                padding-right: 10%
+            @media (min-width: 1200px)
+                padding-right: 200px
+            
+#content-wrap
+    @media (min-width: 768px)
+        max-width: 950px
+        margin: auto
+        #main-content
+            padding-right: 50px 
+.row
+    padding-bottom: 50px
+.row-title
+    //@media (max-width: 992px)
+    box-shadow: 0 4px 3px -3px #d7d7d7
+    border-top: 1px solid #a7a7a7
+    height: 50px
+    margin: 10px 0 15px 0
+    h3
+        margin: 10px 0 0 0
+.article-snippet
+    .source
+        font-size: 12px
+        color: grey
+        //text-align: right
+        @media (max-width: 768px)
+            font-size: 11px
+            text-align: left
+        span
+            color: grey
+.press-page
+    margin-bottom: 25px
+#aside
+    img
+        @media (max-width: 992px)
+            display: inline
+            margin: 20px
+        @media (min-width: 992px) 
+            display: block
+            width: 50px
+            margin: auto
+            margin-bottom: 50px
+    @media (min-width: 992px)        
+        #first
+            margin-top: 50px
+    .aside-push
+        @media (min-width: 992px)
+            margin-top: 50px
+#footer
+    background: $red
+    color: white
+    padding: 5% 10%
+    //table
+        width: 100%
+        #top-row
+            td
+                font-weight: 500
+                font-size: 16px
+        td
+            width: 20%
+            font-weight: 300
+            padding: 5px 0
+    text-align: center 

@@ -1,0 +1,23 @@
+Hi all,
+
+Here are my notes on the website. I'm still just getting the layout for the content down, spelling, grammar, and copy editing is the last step. Feel free to append any notes to this document. 
+
+** GENERAL PAGES
+    The navigation bar still needs styling. Since the original proposed design I brought the nav bar from the side, up to the top. Is this okay or would you prefer to have it remain on the side?
+    
+** HOME PAGE
+    Ugly as all hell, will be the last thing I create after we get all the necessary info for the site figured out. Should included:
+        * date of the event
+        * suggested donations and drop off location
+        * paypal button -- if possible
+        * photo of giftmart people
+        
+** REGISTRATION PAGE
+    This weekend I am going to talk to Brian's roommates to find a JS fix so that when some clicks the "I recieved more than 1 invitation" checkbox 1) the box appears as checked, 2) after selecting the number of extra invitation numbers, the approppriate number of text fields appear.
+    ex.
+        I recieved more than 1 inviation. [/]
+        How many? --> 2
+            _________
+            _________
+                    [submit]
+ 

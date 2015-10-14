@@ -1,0 +1,279 @@
+.specific-page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./assets/img/white-home-decoration-candles.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  box-shadow: 0 4px 3px -3px #efefef;
+  color: white;
+  height: 250px;
+}
+
+.page-title {
+  color: #c65c54;
+}
+
+.pull-right {
+  margin-top: 15px;
+}
+
+@media (min-width: 786px) {
+  .pull-right {
+    margin-top: 50px;
+  }
+}
+
+.pull-right a {
+  color: #c65c54;
+  cursor: pointer;
+}
+
+.indent {
+  padding-left: 25px;
+}
+
+.demo-image {
+  text-align: center;
+}
+
+.demo-image img {
+  width: 300px;
+  margin: auto;
+}
+
+@media (max-width: 786px) {
+  .demo-image img {
+    margin-bottom: 25px;
+  }
+}
+
+.involved {
+  border-left: solid 5px #c65c54;
+  margin-bottom: 25px;
+}
+
+form {
+  max-width: 550px;
+  margin: auto;
+}
+
+form h3 {
+  margin-top: 50px;
+  color: #c65c54;
+}
+
+form h3 span {
+  color: black;
+}
+
+.modal {
+  margin-top: 25vh;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+  background: #c65c54;
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-header button {
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-body form label {
+  color: #c65c54;
+}
+
+.modal .modal-dialog .modal-content .modal-body ol li {
+  margin-top: 15px;
+}
+
+.modal .modal-dialog .modal-content .modal-body ol ul li {
+  margin-top: 0;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .btn-primary {
+  background: #c65c54;
+  border: #c65c54;
+  color: white;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .btn-primary:hover {
+  background: #cb6c65;
+}
+
+h1, h3 {
+  padding-bottom: .5em;
+}
+
+@media (min-width: 768px) {
+  h1, h3 {
+    padding-bottom: 1em;
+  }
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding-top: 8px;
+}
+
+body {
+  background: #c65c54;
+}
+
+#page-wrap {
+  background: white;
+}
+
+#nav-row {
+  height: 50px;
+  padding: 0;
+}
+
+nav {
+  height: 50px;
+  box-shadow: 0 4px 3px -3px #efefef;
+}
+
+@media (min-width: 992px) {
+  nav {
+    height: 70px;
+  }
+}
+
+@media (min-width: 786px) {
+  nav .container-fluid ul {
+    float: right;
+  }
+}
+
+#header-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./assets/img/white-home-decoration-candles.jpg) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  box-shadow: 0 4px 3px -3px #efefef;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  #header-image .container {
+    max-width: 1000px;
+  }
+}
+
+#header-image .container #title {
+  color: #c65c54;
+}
+
+#header-image .container #title #slogan {
+  color: white;
+  font-weight: 300;
+}
+
+#header-image .container p {
+  font-size: 16px;
+}
+
+@media (min-width: 786px) {
+  #header-image .container p {
+    margin-top: -20px;
+    padding-right: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #header-image .container p {
+    padding-right: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  #content-wrap {
+    max-width: 950px;
+    margin: auto;
+  }
+  #content-wrap #main-content {
+    padding-right: 50px;
+  }
+}
+
+.row {
+  padding-bottom: 50px;
+}
+
+.row-title {
+  box-shadow: 0 4px 3px -3px #d7d7d7;
+  border-top: 1px solid #a7a7a7;
+  height: 50px;
+  margin: 10px 0 15px 0;
+}
+
+.row-title h3 {
+  margin: 10px 0 0 0;
+}
+
+.article-snippet .source {
+  font-size: 12px;
+  color: grey;
+}
+
+@media (max-width: 768px) {
+  .article-snippet .source {
+    font-size: 11px;
+    text-align: left;
+  }
+}
+
+.article-snippet .source span {
+  color: grey;
+}
+
+.press-page {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 992px) {
+  #aside img {
+    display: inline;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  #aside img {
+    display: block;
+    width: 50px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  #aside #first {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  #aside .aside-push {
+    margin-top: 50px;
+  }
+}
+
+#footer {
+  background: #c65c54;
+  color: white;
+  padding: 5% 10%;
+  text-align: center;
+}
