@@ -1,7 +1,8 @@
 @import variables  
 @import ./bourbon
 @import about  
-@import modal    
+@import modal 
+@import nav
 // declare styles for text items    
 h1, h2, h3, h4, h5, h6
 h1, h3
@@ -23,44 +24,11 @@ ul
 body
     background: $red
 #page-wrap
-    background: white
-#nav-row
-    height: 50px
-    padding: 0
-nav
-    height: 50px
-    @media (min-width: 992px) 
-        height: 70px
-    box-shadow: 0 4px 3px -3px #efefef
-    .container-fluid
-        .navbar-header, .collapse
-        @media (min-width: 786px)    
-            ul
-                float: right
-        
-#header-image
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(./assets/img/white-home-decoration-candles.jpg) center 
-    background-size: cover
-    background-repeat: no-repeat
-    margin-top: 0
-    box-shadow: 0 4px 3px -3px #efefef
-    color: white
-    .container
-        @media (min-width: 1200px)
-            max-width: 1000px 
-        #title
-            color: #c65c54
-            #slogan
-                color: white
-                font-weight: 300
-        p
-            font-size: 16px
-            @media (min-width: 786px)
-                margin-top: -20px
-                padding-right: 10%
-            @media (min-width: 1200px)
-                padding-right: 200px
-            
+    background: white 
+// set up the header images
+.page-header
+    #about
+        +banner-image(url(https://static.pexels.com/photos/6446/white-home-decoration-candles-large.jpg))
 #content-wrap
     @media (min-width: 768px)
         max-width: 950px
