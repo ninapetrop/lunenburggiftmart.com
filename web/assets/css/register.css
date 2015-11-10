@@ -1,0 +1,193 @@
+footer {
+  padding: 20px 50px;
+  background: #f44336;
+  color: white;
+  border-top: solid #D32F2F 15px;
+}
+
+.footer-list {
+  font-size: 12px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-list ul a {
+  color: white;
+}
+
+#nav-row {
+  background: white;
+  margin-bottom: 50px;
+}
+
+nav.navbar {
+  background: white;
+}
+
+nav {
+  background: white;
+}
+
+nav .container-fluid {
+  background: white;
+  max-width: 1050px;
+}
+
+nav .navbar-header {
+  background: white;
+  color: black;
+}
+
+nav .navbar-header a {
+  color: #f44336;
+}
+
+nav .navbar-header button {
+  border: none;
+  background: white;
+}
+
+nav .navbar-header span {
+  background: #f44336;
+}
+
+nav .navbar-collapse {
+  background: white;
+  color: black;
+}
+
+@media (min-width: 786px) {
+  nav .navbar-collapse ul {
+    float: right;
+  }
+}
+
+@media (max-width: 786px) {
+  nav .navbar-collapse ul li {
+    padding-left: 20px;
+  }
+}
+
+nav .navbar-collapse ul li a {
+  color: black;
+}
+
+.modal .modal-header {
+  background: #f44336;
+  color: white;
+}
+
+.modal .modal-header {
+  border-bottom: 10px solid #D32F2F;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal ol li {
+  margin-top: 10px;
+}
+
+.modal ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.modal ul li {
+  margin-top: 5px;
+}
+
+.modal button {
+  background: #8bc34a;
+  border: #8bc34a;
+  color: white;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/background.jpg) center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: auto;
+  border-radius: 0;
+}
+
+body h1 {
+  font-family: Abril Fatface, cursive;
+}
+
+body .jumbotron {
+  background: none;
+  margin-bottom: 0;
+  padding: 20px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+body .jumbotron h1 {
+  color: white;
+  font-size: 56px;
+}
+
+@media (min-width: 992px) {
+  body .jumbotron h1 {
+    margin-top: 100px;
+  }
+}
+
+body .jumbotron p {
+  color: white;
+  margin: 20px 0;
+}
+
+@media (min-width: 992px) {
+  body .jumbotron p {
+    padding-right: 45%;
+  }
+}
+
+body .jumbotron .btn {
+  background: #8bc34a;
+}
+
+body .registration-container {
+  max-width: 650px;
+  margin: auto;
+  padding: 15px;
+  background: linear-gradient(rgba(225, 225, 225, 0.6), rgba(225, 225, 225, 0.6));
+  border-radius: 5px;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+body .registration-container .panel {
+  border: none;
+}
+
+body .registration-container .panel .panel-heading {
+  background: #f44336;
+  border-bottom: 10px #D32F2F solid;
+  color: white;
+}
+
+body .registration-container .panel .panel-heading .panel-title {
+  font-size: 24px;
+}
+
+body .registration-container .panel .panel-heading .panel-title span {
+  font-weight: 300;
+}
+
+body .registration-container .panel .panel-footer {
+  background: white;
+  color: black;
+  height: 60px;
+}
+
+body .registration-container .panel .panel-footer .btn {
+  background: #8bc34a;
+  border: #8bc34a;
+}
+
+body .registration-container .panel .panel-body form input {
+  max-width: 300px;
+}

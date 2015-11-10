@@ -1,0 +1,183 @@
+/* FONT DECLARATIONS */
+@font-face { font-family: BigJohn; src: url('fonts/BIGJOHN.otf'); } 
+@font-face { font-family: SlimJoe; src: url('fonts/SlimJoe.otf');}
+
+body    {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 95%;
+    color: #3B3531;
+}
+
+#topBanner {
+    width: 100%;
+    height: auto;
+    float: left;
+    background-image: url(subtle_zebra_3d.png);
+   
+}
+#topBanner h1   {
+    font-family: BigJohn;
+    font-size: 300%;
+    text-align: center;
+    padding-top: 5%;
+}
+#topBanner h3   {
+    font-family: SlimJoe;
+    text-align: center;
+    padding-bottom: 15%;
+}
+/*#topBanner img  {
+    height: auto;
+    width: 100%;
+}*/
+#quickMenu  {
+    background-color: #1D5165; /* #0d1136; */
+    width: 100%;
+    height: auto;
+    padding: 2% 0;
+    float: left;
+}
+#quickMenu table    {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    color: white;
+    
+}
+#quickMenu table td {
+    padding: 0 8%;
+}
+#quickMenu table p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 85%;
+    color: #95E1FE;
+}
+#quickMenu table h2 {
+    font-family: SlimJoe;
+    line-height: 0;
+}
+#quickMenu a    {
+    text-decoration: none;
+    color: white;
+}
+#quickMenu a:hover    {
+    text-decoration-color: #8bcbba;
+    color: white;
+}
+#centerWrapper  {
+    float: left;
+    width: 100%;
+    height: auto;
+    
+}
+#centerWrapper h2 {
+    font-family: BigJohn;
+    text-align: center;
+    font-size: 200%;
+    color: #D1655B;
+    
+}
+#centerWrapper h3 {
+    font-family: BigJohn;
+    color: #6B605A;
+    
+}
+.portion    {
+    width: 90%;
+    height: auto;
+    float: left;
+    padding: 5% 5%;
+    border-top: solid 5px #8bcbba;
+}
+.leftColumn ul li {
+    list-style: none;
+    padding: 0 0 2% 2%;
+   
+}
+.portion hr {
+    width: 40%;
+    background-color: #8bcbba;
+    border: none;
+    height: .1%;
+    margin: 5% 30%;
+}
+.leftColumn img  {
+    width: 60%;
+    height: auto;
+    margin: 5% 10%;
+    display: inline;
+}
+.CLEAR {
+    clear: both;
+}
+.leftColumn {
+    float: left;
+    height: auto;
+    width: 22.5%;
+}
+
+#mainContent    {
+    float: left;
+    height: auto;
+    width: 45%;
+    padding: 0 5%;
+}
+/*#mainContent img    {
+    float: center;
+    max-width: 15%;
+    height: auto;
+    margin: 5% 8%;
+}*/
+#mainContent table  {
+    width: 90%;
+    height: auto;
+    padding: 0 5%;
+    font-size: 75%;
+    margin-top: 10%;
+    
+}
+#mainContent table img {
+    min-width: 20%;
+    padding-bottom: 15%;
+    height: auto;
+    margin: auto;
+    
+}
+#mainContent table tr   {
+    padding: 0 5%;
+}
+.rightColumn li {
+    list-style: none;
+    margin-left: 5%;
+    
+}
+#footer {
+    background-color: #1D5165; /* 0d1136 */
+    float: left;
+    width: 100%;
+    height: auto;
+}
+#footer table   {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    color: white;
+    font-size: 80%;
+    font-weight: 300;
+    padding: 2% 0;
+}
+#footer table tr:first-child    {
+    font-family: BigJohn;
+    margin-bottom: 1%;
+}
+#footer p   {
+    text-align: center;
+    font-size: 70%;
+    color: white;
+    font-weight: 300;
+    padding-top: 2%;
+}
