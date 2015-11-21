@@ -72,6 +72,10 @@ footer {
   color: white;
 }
 
+.modal {
+  color: black;
+}
+
 .modal .modal-header {
   background: #f44336;
   color: white;
