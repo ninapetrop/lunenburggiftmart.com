@@ -7,6 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Lunenburg Giftmart</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/register.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/jquery.bootstrap-touchspin.css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- fonts -->
@@ -68,9 +70,9 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="address" class="col-sm-4 control-label">Address</label>
+                  <label for="town" class="col-sm-4 control-label">City/Town</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="address" placeholder="123 Main St. Hollywood, CA 01236">
+                    <input type="text" class="form-control" id="town" placeholder="Lunenburg">
                   </div>
                 </div>
                 <div class="form-group">
@@ -79,114 +81,36 @@
                     <input type="text" class="form-control" id="invitationNumber" placeholder="1234567890">
                   </div>
                 </div>
-                <div class="form-group">
-                  <div class="col-sm-offset-4 col-sm-8">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> I received more than 1 invitation
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <!-- Created only if they select the "i recieved more than 1 invitation checkbox" -->
-                <div class="form-group">
-                  <label for="invitationNumber" class="col-sm-4 control-label">Additional Invitations</label>
-                  <div class="col-sm-8">
-                    <input type="text" class="form-control" id="invitationNumber" placeholder="1234567890">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="col-sm-offset-8 col-sm-4">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Add another
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <!-- end conditional -->
+                <p class="text-muted col-sm-offset-4 col-sm-8">
+                  *If you recieved more than 1 invitation number, enter additional invitation numbers into the field above seperated by a space (i.e "6430, 3456")<br><br>
+                </p>
+
                 <h3 style="margin-bottom: 25px">Step 2: Shopper Information</h3>
-                <div class="form-group">
-                  <label for="name" class="col-sm-4 control-label">Number of people you're shopping for</label>
-                  <select class="form-control" style="width: 300px;float:center;">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5+</option>
-                  </select>
-                </div>
-                <!--  created based on number selected from drop down -->
-                <div class="form-group">
-                  <label for="person1" class="col-sm-4 control-label">Person 1</label>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control" id="person1Age" placeholder="Age">
+                <p>
+                  <strong>Enter the age and gender for each person you're shopping for.</strong><br>Press enter to save your data and enter information for another person.
+                </p>
+                <form class="inline-form">
+                  <div class="form-group">
+                    <div class="col-sm-3 col-sm-offset-1">
+                      <input type="text" class="form-control" id="person1Age" placeholder="Age">
+                    </div>
+                    <div class="col-sm-3">
+                      <select class="form-control">
+                        <option>Female</option>
+                        <option>Male</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-1">
+                      <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:green;border:solid 2px green;padding:5px;text-align:center"></span>
+                    </div>
+                    <div class="col-xs-12">
+                      <p>
+                        List of people goes here
+                      </p>
+                    </div>
                   </div>
-                  <div class="col-sm-6 col-sm-offset-4">
-                    <input type="text" class="form-control" id="person1Sex" placeholder="Gender" style="margin-top:15px">
-                  </div>
-                </div>
-                <!-- end conditional -->
+                </form>
                 <br>
-                <label>Please pick the top 5 caterories you are interest in this year.</label><p>The following question is used to help us gauge interest in various inventory categories. </p>
-                <div class="form-group" style="padding: 0 0 0 50px">
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Toys (trucks, cars, board games etc.)
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Craft sets
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> DVDs, Books
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Clothing (Winter coats, hats etc.)
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Jewlery, wallets, purses etc.
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Barbies/Dolls
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Sporting Goods
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Gift certificates
-                      </label>
-                    </div>
-                  </div>
-                </div>
               </form>
 
             </div>
