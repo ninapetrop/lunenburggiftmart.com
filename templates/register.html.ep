@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Lunenburg Giftmart</title>
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <!-- took this away for pre-registration "<body id="full-page-banner">" -->
+  <body>
+    <div class="container-fluid" id="full-page-banner">
+      <div class="row" id="nav-row">
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display-->
+              <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">Lunenburg Giftmart</a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling-->
+              <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="donate.html">Donate </a></li>
+                  <li><a href="press.html">Press </a></li>
+                  <li><a href="register.html">Register </a></li>
+                  <li><a href="contact.html">Contact </a></li>
+                  <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" target="_blank"><img src="/img/9.png" style="height:25px"></a></li>
+                </ul>
+              </div>
+              <!-- /.navbar-collapse-->
+            </div>
+            <!-- /.container-fluid-->
+          </nav>
+        </div>
+      <!-- added "full-page-banner" for pre-reg. fix -->
+      <div class="row" id="full-page-banner">
+        <!-- added "index-jumbo" for pre-reg. fix -->
+        <div class="jumbotron" id="index-jumbo">
+          <h1 style="color:white;">Registration</h1>
+% if( !stash('success') ) {
+            <p style="font-size:24px;">Registration is required for this event. Fill out the form below to register.</p>
+% }
+
+			<p>Have questions? Read our <a data-toggle="modal" data-target="#registerFAQ">FAQs</a></p>
+        </div>
+        <div class="registration-container">
+          <div class="panel panel-default registration" id="registration1">
+            <div class="panel-heading">
+              <h2 class="panel-title">Giftmart Registration</h2>
+            </div>
+            <div class="panel-body">
+
+% if( stash('success') ) {
+              <h3 style="margin-bottom: 25px"><b><%= stash('name') %></b>, you have successfully registerd for the Lunenburg Giftmart!</h3>
+% } else {
+              <form novalidate="novalidate" class="form-horizontal" role="form" method="post">
+              <h3 style="margin-bottom: 25px">Step 1: Invitation Information</h3>
+                <div class="form-group">
+                  <label for="name" class="col-sm-4 control-label">Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" value="<%= $field->{name} %>">
+                  </div>
+                </div>
+% if( $error->{name} ) {
+				<div class="col-sm-offset-2 alert alert-danger"><%= $error->{name} %></div>
+% }
+                <div class="form-group">
+                  <label for="town" class="col-sm-4 control-label">City/Town</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="town" name="town" placeholder="Lunenburg" value="<%= $field->{town} %>">
+                  </div>
+                </div>
+% if( $error->{town} ) {
+				<div class="col-sm-offset-2 alert alert-danger"><%= $error->{town} %></div>
+% }
+                <div class="form-group">
+                  <label for="email" class="col-sm-4 control-label">Email (optional)</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="janedoe@gmail.com" value="<%= $field->{email} %>">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="invitationNumber" class="col-sm-4 control-label">Invitation Number</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="invitationNumber" name="invitation_number" placeholder="1234567890" value="<%= $field->{invitation_number} %>">
+                  </div>
+                <p class="text-muted col-sm-offset-4 col-sm-8">
+                  *If you recieved more than 1 invitation number, enter additional invitation numbers into the field above seperated by commas (i.e "6430, 3456")<br><br>
+                </p>
+				</div>
+% if( $error->{invitation_number} ) {
+				<div class="col-sm-offset-2 alert alert-danger"><%= $error->{invitation_number} %></div>
+% }
+
+                <h3 style="margin-bottom: 25px">Step 2: Shopper Information</h3>
+                <p>
+                  <strong>Enter the age and gender for each person you're shopping for.</strong><br>
+                </p>
+% if( $error->{giftee} ) {
+				<div class="alert alert-danger"><p><%= $error->{giftee} %></p></div>
+% }
+				<div class="form-group repeatable-container">
+% my $i = 10;
+% foreach my $giftee_obj ( @{ $field->{giftees} } ) {
+%=	$c->render_to_string('register/people', i => $i++, giftee => $giftee_obj);
+% }
+				</div>
+
+				<div class="col-sm-3">
+					<input type="button" value="Add Person" class="btn btn-primary add">
+				</div>
+
+            </div>
+            <div class="panel-footer">
+              <button type="submit" class="btn btn-primary pull-right">Submit</button>
+            </div>
+        	</div>
+            </form>
+% }
+
+        </div>
+      </div>
+      <!-- end Jumbotron -->
+      <footer class="row fixed-bottom">
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="donate.html" style="color:white;">Donate</a></strong></li>
+            <li><a href="donate.html" style="color:white;">Suggested Items</a></li>
+            <li><a href="donate.html" style="color:white;">Checks</a></li>
+            <li><a href="donate.html" style="color:white;">Donation Box Locations</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="about.html" style="color:white;">About</a></strong></li>
+            <li><a href="about.html" style="color:white;">Our Mission</a></li>
+            <li><a href="press.html" style="color:white;">Press & Articles</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="register.html" style="color:white;">Register</a></strong></li>
+            <li><a href="register.html" style="color:white;">Register here</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="contact.html" style="color:white;">Contact</a></strong></li>
+            <li><a href="mailto:lunenburggiftmart@gmail.com" target="_blank" style="color:white;">Email Us</a></li>
+            <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" style="color:white" target="_blank">Like us on Facebook</a></li>
+          </ul>
+        </div>
+      </footer>
+			<!-- MODALS -->
+    <!-- Modal -->
+    <div class="modal fade" id="registerFAQ" tabindex="-1" role="dialog" aria-labelledby="registerFAQ">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="registerFAQ">Registeration FAQs</h4>
+          </div>
+          <div class="modal-body">
+            <br><br>
+            <ol>
+              <li><strong>How is eligibility determined/how do I receive an invitation?</strong></li>
+                <ul><li>Eligibility is determined by the Food Band and/or the schools.<br><br>Invitations are included with the Thanksgiving Food Baskets distributed by the Lions Club. Invitations are also sent to families on the Reduced Lunch Program.</li></ul>
+              <li><strong>Do I have to register?</strong></li>
+                <ul><li>Yes, all shoppers must be preregistered by 12/4, the available inventory is based on the number of registered participants.</li></ul>
+              <li><strong>If I recieved an invitation, but do not have access to a computer, how can I register?</strong></li>
+                <ul><li>Computers are available to Seniors at the Senior Center and to everyone at the Lunenburg Public Library, both locations have folks who will offer assistance.</li></ul>
+              <li><strong>What if I have a question and can not find anyone to help me?</strong></li>
+                <ul><li>For questions, please, email us at <a href="#">lunenburggiftmart.com</a>, or call Nancy Kerylow at 978-502-5624.</li></ul>
+              <li><strong>Can I bring my whole family with me to Giftmart?</strong></li>
+                <ul><li>We recommend that you do not bring the people that you are shopping for, and please note there is only one invitation per family</li></ul>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.repeatable.js"></script>
+
+	<script type="text/template" id="people">
+		<div class="form-group field-group">
+			<div class="col-sm-3 col-sm-offset-1">
+				<input type="text" class="form-control" name="giftee_age_{?}" placeholder="Age">
+			</div>
+			<div class="col-sm-3">
+				<select class="form-control" name="giftee_gender_{?}">
+					<option value="f" selected>Female</option>
+					<option value="m">Male</option>
+				</select>
+			</div>
+			<div class="col-sm-1">
+				<input type="button" class="btn btn-danger delete" value="X">
+			</div>
+		</div>
+	</script>
+
+	<script>
+		$(function() {
+		    $("form .repeatable-container").repeatable({
+		        template: "#people",
+				startWith: 1,
+				max: 10
+		    });
+		});
+	</script>
+  </body>
+</html>

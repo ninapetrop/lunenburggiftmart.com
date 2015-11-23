@@ -1,0 +1,19 @@
+<div class="form-group field-group">
+	<div class="col-sm-3 col-sm-offset-1">
+		<input type="text" class="form-control" name="giftee_age_new<%= $i %>" placeholder="Age" value="<%= $giftee->{age} %>">
+	</div>
+	<div class="col-sm-3">
+		<select class="form-control" name="giftee_gender_new<%= $i %>">
+% if( $giftee->{gender} eq "f" ) {
+			<option value="f" selected>Female</option>
+			<option value="m">Male</option>
+% } else {
+			<option value="f">Female</option>
+			<option value="m" selected>Male</option>
+% }
+		</select>
+	</div>
+	<div class="col-sm-1">
+		<input type="button" class="btn btn-danger delete" value="X">
+	</div>
+</div>
