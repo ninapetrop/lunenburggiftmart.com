@@ -1,0 +1,37 @@
+      <footer class="row">
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="donate.html" style="color:white;">Donate</a></strong></li>
+            <li><a href="donate.html" style="color:white;">Suggested Items</a></li>
+            <li><a href="donate.html" style="color:white;">Checks</a></li>
+            <li><a href="donate.html" style="color:white;">Donation Box Locations</a></li>
+          </ul>  
+        </div> 
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="about.html" style="color:white;">About</a></strong></li>
+            <li><a href="about.html" style="color:white;">Our Mission</a></li>
+            <li><a href="press.html" style="color:white;">Press & Articles</a></li>
+          </ul>  
+        </div> 
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="register.html" style="color:white;">Register</a></strong></li>
+            <li><a href="register.html" style="color:white;">Register here</a></li>
+          </ul>  
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <ul class="footer-list">
+            <li><strong><a href="contact.html" style="color:white;">Contact</a></strong></li>
+            <li><a href="mailto:lunenburggiftmart@gmail.com" target="_blank" style="color:white;">Email Us</a></li>
+            <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" style="color:white" target="_blank">Like us on Facebook</a></li>
+          </ul>  
+        </div>
+      </footer> 
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+  </body>
+</html>

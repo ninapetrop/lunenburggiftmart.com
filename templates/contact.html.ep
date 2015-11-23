@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
     <title>Lunenburg Giftmart | Contact</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <!-- Latest compiled and minified CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- fonts-->
@@ -35,7 +35,7 @@
                   <li><a href="press.html">Press </a></li>  
                   <li><a href="register.html">Register </a></li>
                   <li><a href="contact.html">Contact </a></li>
-                  <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" target="_blank"><img src="assets/img/9.png" style="height:25px"></a></li>
+                  <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" target="_blank"><img src="/img/9.png" style="height:25px"></a></li>
                 </ul>
               </div>
               <!-- /.navbar-collapse-->

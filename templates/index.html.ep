@@ -1,0 +1,11 @@
+%= include 'segments/top'
+      <div class="row" id="full-page-banner">
+        <div class="jumbotron" id="index-jumbo">
+          <h1 style="color:white;">Lunenburg Giftmart</h1>
+            <p style="font-size:36px;">Celebrating community</p>
+            <p style="font-size:24px;" style="font-weight:500;">We are seeking donations of new toys and gifts for all ages to ensure that the members of our community have a wonderful holiday season.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Donate Today</a></p>
+        </div>
+      </div> 
+      <!-- end Jumbotron -->
+%= include 'segments/bottom'

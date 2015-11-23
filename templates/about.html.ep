@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags-->
-    <title>Lunenburg Giftmart | Donate</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <title>Lunenburg Giftmart</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
     <!-- Latest compiled and minified CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- fonts-->
@@ -35,7 +35,7 @@
                   <li><a href="press.html">Press </a></li>  
                   <li><a href="register.html">Register </a></li>
                   <li><a href="contact.html">Contact </a></li>
-                  <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" target="_blank"><img src="assets/img/9.png" style="height:25px"></a></li>
+                  <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" target="_blank"><img src="/img/9.png" style="height:25px"></a></li>
                 </ul>
               </div>
               <!-- /.navbar-collapse-->
@@ -44,63 +44,43 @@
           </nav>
         </div>    
       <div class="row">
-        <div class="jumbotron" id="donate-jumbo">
-          <h1>Donate</h1>
-          <p>Give back to your community this holiday season by donating to Lunenburg Family Giftmart.</p>
-        </div>  
+        <div class="jumbotron" id="about-jumbo">
+          <h1>About</h1>
+          <p style="margin-top: 25px;">Through the generosity of our community, we offer an opportunity for families in need to shop for free during the holiday season.</p>
+          <p><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" target="_blank" role="button" class="btn btn-primary btn-lg">Like us on Facebook</a></p>
+        </div>
       </div>
       <!-- end Jumbotron-->
-      <div class="row content-wrap">  
-        <div class="col-xs-12 col-sm-8 main-content">
-          <h2 class="col-xs-12" style="padding-left: 0;">Suggested Donations</h2>
-          <p>We are seeking donations of new toys and gifts for all ages to ensure that the members of our community have a wonderful holiday season. Families attending Giftmart are shopping for: babies, toddlers, teenagers, moms, dads, and grandparents.</p>     
-          <ul class="col-xs-6 list" style="margin-top: 0">
-            <li>Barbies/Bolls</li> 
-            <li>Trucks/Cars</li>
-						<li>Toys</li>
-						<li>Crafts</li>
-            <li>Hoodies</li>
-						<li>Wallets/Purses</li> 
-            <li>Sporting Goods</li>
-            <li>Stuffed Animals</li>
-          </ul>  
-          <ul class="col-xs-6 list" style="margin-top: 0">
-            <li>Winter Coats/Hats/Mittens or Gloves</li> 
-            <li>Puzzles/Games</li>
-            <li>Jewlery</li>
-						<li>Gift Cards/Certificates</li>
-						<li>Housewares</li>
-						<li>Legos</li>
-						<li>Holiday Gifts</li>
-						<li>Throw Blankets</li>
-          </ul>     
-          <h2 class="col-xs-12 second" style="padding-left: 0;">Donation Drop Off Locations</h2>
-          <p class="col-xs-12" style="padding-left: 0;">Donations to Giftmart can be dropped off at the following locations:</p>
-          <ul class="col-xs-6 list" style="margin-top: 0;">
-            <li>Lunenburg Public Library</li>
-						<li>Lunenburg Primary School</li>
-            <li>The Boys and Girls Club</li>
-						<li>Public Safety Building</li>
-          </ul>
-          <ul class="col-xs-6 list" style="margin-top: 0;">
-            <li>New Outlooks</li> 
-            <li>Turkey Hill Middle School</li>
-            <li>Lunenburg High SChool</li>
-						<li>Cabel Salon</li>
-						<li>Lunenburg Senior Center</li>
-          </ul>
+      <div class="row content-wrap">
+        <div class="col-xs-12 col-md-8 main-content">
+          <h2 class="col-xs-12" style="padding-left: 0;">Our Mission</h2>
+          <p>Lunenburg Family Giftmart was created in 2009 because of an identified need in our own community. Due to the lagging economy some families had no resources for traditions such as gift giving during the holiday season. Through the generosity of our community we have been able to offer a way for families in need to shop for free. We work with St. Boniface, the Lions Club, Lunenburg Food Bank and the Lunenburg School District.</p>
+					<div class="col-xs-4 partner-img"><img src="/img/lionlogo_2c.jpg"></div>
+					<div class="col-xs-4 partner-img"><img src="/img/sbc.png"></div>
+					<div class="col-xs-4 partner-img"><img src="/img/seal.png"></div>
+					<p><br>The way Giftmart works is simple, we rely on donations from the community, either monetary or any new items which could be given as gifts. We are looking for toys, games, jewelry, warm clothing etc. Invitations to shop at Giftmart are distributed the local food bank and through organizations who work with those families who may need support. Giftmart is set up for one day, during which our guests can “shop” for free in a relaxed and friendly atmosphere. We provide gift wrapping, stocking stuffers and good wishes for a stress free holiday.</p>
+					
+          
         </div>
-        <div class="col-xs-12 col-sm-4 aside">    
-          <h2>Monetary Donations</h2>   
-          <p>Monetary donations help provide a variety of gifts for our invited families to shop for. Monetary donations in the form of checks must be <strong>made payable to GIFTMART</strong> and can be mailed to:</p>
-          <ul>
-						<li><strong>Giftmart</strong></li>
-            <li><strong>c/o Nancy Kerylow</strong></li> 
-						<li>12 White Tail Crossing</li>
-            <li>Lunenburg, MA 01462</li>  
-          </ul>    
+        <div class="col-xs-12 col-md-4 aside">
+          <h2>Growing Every Year</h2> 
+          <p>Since 2009, the number of families invited to Giftmart has steadily grown. In 2014, Giftmart opened it's doors to over 100 families - an over 25% increase from 2013. We rely on donations from the community and the generosity from our sponsors.</p>
+					<br>
+					<p><strong>Thank You to our 2014 Corporate Sponsors</strong></p>
+          <ul class="col-xs-12 list" style="margin-top: 0">
+            <li>Central Mass Garden Center</li>  
+            <li>Chapdelaine Buick GMC</li>
+            <li>Hanover Insurance</li>
+						<li>Lourens Memorial Fund</li> 
+            <li>Lunenburg Ledger</li>
+            <li>PJ Keating</li>
+						<li>Reagan and Co.</li> 
+            <li>Powell Stone and Gravel</li>
+            <li>RVJ</li>
+          </ul>
+					<p>We would also like to thank our generous individual donors.</p>
         </div>
-      </div>   
+      </div>
       <footer class="row">
         <div class="col-xs-12 col-sm-3">
           <ul class="footer-list">
@@ -130,7 +110,7 @@
             <li><a href="https://www.facebook.com/LunenburgGiftmart?fref=ts" style="color:white" target="_blank">Like us on Facebook</a></li>
           </ul>  
         </div>
-      </footer> 
+      </footer>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
