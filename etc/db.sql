@@ -5,7 +5,7 @@ CREATE TABLE shoppers (
 	shopper_id INT PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(255),
 	email VARCHAR(255),
-	city VARCHAR(255)
+	town VARCHAR(255)
 );
 
 CREATE TABLE giftees (
