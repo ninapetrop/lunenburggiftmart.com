@@ -7,7 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Lunenburg Giftmart</title>
     <link rel="stylesheet" type="text/css" href="/css/register.css">
-    <link rel="stylesheet" type="text/css" href="/css/jquery.bootstrap-touchspin.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -52,8 +51,7 @@
         <!-- added "index-jumbo" for pre-reg. fix -->
         <div class="jumbotron" id="index-jumbo">
           <h1 style="color:white;">Registration</h1>
-            <p style="font-size:36px;">Registration will open mid-afternoon on November 21, 2015.</p>
-            <p  style="font-size:24px;">Registeration is required for this event. Fill out the form below to register.<br><br>Have questions? Read our <a data-toggle="modal" data-target="#registerFAQ">FAQs</a></p>
+            <p style="font-size:24px;">Registeration is required for this event. Fill out the form below to register.<br><br>Have questions? Read our <a data-toggle="modal" data-target="#registerFAQ">FAQs</a></p>
         </div>
         <div class="registration-container">
           <div class="panel panel-default registration" id="registration1">
@@ -62,57 +60,52 @@
             </div>
             <div class="panel-body">
               <h3 style="margin-bottom: 25px">Step 1: Invitation Information</h3>
-              <form class="form-horizontal">
+              <form novalidate="novalidate" class="form-horizontal" role="form" method="post">
                 <div class="form-group">
                   <label for="name" class="col-sm-4 control-label">Name</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="name" placeholder="Jane Doe">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="town" class="col-sm-4 control-label">City/Town</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="town" placeholder="Lunenburg">
+                    <input type="text" class="form-control" id="town" name="town" placeholder="Lunenburg">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="col-sm-4 control-label">Email (optional)</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="janedoe@gmail.com">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="invitationNumber" class="col-sm-4 control-label">Invitation Number</label>
                   <div class="col-sm-8">
-                    <input type="text" class="form-control" id="invitationNumber" placeholder="1234567890">
+                    <input type="text" class="form-control" id="invitationNumber" name="invitation_number" placeholder="1234567890">
                   </div>
-                </div>
                 <p class="text-muted col-sm-offset-4 col-sm-8">
-                  *If you recieved more than 1 invitation number, enter additional invitation numbers into the field above seperated by a space (i.e "6430, 3456")<br><br>
+                  *If you recieved more than 1 invitation number, enter additional invitation numbers into the field above seperated by commas (i.e "6430, 3456")<br><br>
                 </p>
+				</div>
 
                 <h3 style="margin-bottom: 25px">Step 2: Shopper Information</h3>
                 <p>
                   <strong>Enter the age and gender for each person you're shopping for.</strong><br>
                 </p>
-                <form class="inline-form">
-                  <div class="form-group">
-                    <div class="col-sm-3 col-sm-offset-1">
-                      <input type="text" class="form-control" id="person1Age" placeholder="Age">
-                    </div>
-                    <div class="col-sm-3">
-                      <select class="form-control">
-                        <option>Female</option>
-                        <option>Male</option>
-                      </select>
-                    </div>
-                    <div class="col-sm-1">
-                      <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:green;border:solid 2px green;padding:5px;text-align:center"></span>
-                    </div>
-                  </div>
-                </form>
-                <br>
-              </form>
+
+				<div class="form-group repeatable-container"></div>
+
+				<div class="col-sm-3">
+					<input type="button" value="Add Person" class="btn btn-primary add">
+				</div>
 
             </div>
             <div class="panel-footer">
-              <button type="button" class="btn btn-primary pull-right">Submit</button>
+              <button type="submit" class="btn btn-primary pull-right">Submit</button>
             </div>
-            </div>
+        	</div>
+            </form>
         </div>
       </div>
       <!-- end Jumbotron -->
@@ -179,8 +172,35 @@
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.repeatable.js"></script>
+
+	<script type="text/template" id="people">
+		<div class="form-group field-group">
+			<div class="col-sm-3 col-sm-offset-1">
+				<input type="text" class="form-control" name="giftee_age_{?}" placeholder="Age">
+			</div>
+			<div class="col-sm-3">
+				<select class="form-control" name="giftee_gender_{?}">
+					<option value="f" selected>Female</option>
+					<option value="m">Male</option>
+				</select>
+			</div>
+			<div class="col-sm-1">
+				<input type="button" class="btn btn-danger delete" value="X">
+			</div>
+		</div>
+	</script>
+
+	<script>
+		$(function() {
+		    $("form .repeatable-container").repeatable({
+		        template: "#people",
+				startWith: 1
+		    });
+		});
+	</script>
   </body>
 </html>
