@@ -103,7 +103,7 @@
                 </p>
 				</div>
 % if( $error->{invitation_number} ) {
-				<div class="col-sm-offset-2 alert alert-info"><%= $error->{invitation_number} %></div>
+				<div class="col-sm-offset-2 alert alert-danger"><%= $error->{invitation_number} %></div>
 % }
 
                 <h3 style="margin-bottom: 25px">Step 2: Shopper Information</h3>
