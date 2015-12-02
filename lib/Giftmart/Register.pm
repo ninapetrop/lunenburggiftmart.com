@@ -28,4 +28,37 @@ sub newReg {
 
 	return;
 }
+sub getShoppers {
+	my ($self) = @_;
+
+	# Prepare MySQL statements
+	my $sth_shoppers = $self->{dbh}->prepare("SELECT shopper_id AS id, name, email, town FROM shoppers");
+	my $sth_giftees = $self->{dbh}->prepare("SELECT age, gender FROM giftees WHERE shopper_id = ?");
+	my $sth_invitations = $self->{dbh}->prepare("SELECT invitation_number FROM invitations WHERE shopper_id = ?");
+
+	# Build a list of shoppers objects
+	my @shoppers;
+
+	$sth_shoppers->execute();
+
+	while( my $shopper = $sth_shoppers->fetchrow_hashref ) {
+		# Build a list of giftee objects
+		$sth_giftees->execute( $shopper->{id} );
+
+		while( my $giftee = $sth_giftees->fetchrow_hashref ) {
+			push( @{ $shopper->{giftees} }, $giftee );
+		}
+
+		# Build a list of invitation numbers
+		$sth_invitations->execute( $shopper->{id} );
+
+		while( my ($invitation) = $sth_invitations->fetchrow_array ) {
+			push( @{ $shopper->{invitations} }, $invitation );
+		}
+
+		push(@shoppers, $shopper);
+	}
+
+	return @shoppers;
+}
 1;
