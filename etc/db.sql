@@ -2,6 +2,7 @@
 -- mysql giftmart -u giftmart < db.sql
 
 CREATE TABLE shoppers (
+	timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	shopper_id INT PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(255),
 	email VARCHAR(255),
