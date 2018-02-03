@@ -4,6 +4,10 @@
 	%= include 'segments/head'
   </head>
   <body>
+  	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MS2D8W"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
     <div class="container-fluid" id="full-page-banner">
       <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
